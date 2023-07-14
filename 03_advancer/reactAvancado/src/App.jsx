@@ -1,10 +1,19 @@
+//import style
+import './App.css'
+//import components
 import City from './assets/city.jpg'
 import ManageData from './components/ManageData'
 import ListRender from './components/listRender'
 import Condicional from './components/Condicional'
-import './App.css'
 import ShowUserName from './components/ShowUserName'
 import CarDetails from './components/CartDEtail'
+import Fragmento from './components/Fragmento'
+import Container from './components/Container'
+
+
+
+
+
 function App() {
   //instancia
   const name = "usuario logado app.jsx (props)"
@@ -45,9 +54,17 @@ function App() {
         <CarDetails brand={car.brand} color={car.color} Km={car.Km} newCars={car.newCars}/>        
        </>
       ))}
+      <Fragmento propFragment="fragment Test" />
+      {/* Container childprop */}
+      <Container myValue="valor propriedade container" >
+        <h3> Esse e um paragrafo filho</h3>
+      </Container>
+      <Container myValue="outro valor do container" >
+        <h3> outro titulo do container reutilizado</h3>
+      </Container>
     </div>
-    
     </>
   )
+    
 }
 export default App
