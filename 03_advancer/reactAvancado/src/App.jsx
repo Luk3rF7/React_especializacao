@@ -1,7 +1,8 @@
 import City from './assets/city.jpg'
-import './App.css'
 import ManageData from './components/ManageData'
 import ListRender from './components/listRender'
+import Condicional from './components/Condicional'
+import './App.css'
 function App() {
   return (
     <>
@@ -20,7 +21,9 @@ function App() {
     </div>
     <div>
       <ListRender />
+      <Condicional/>
     </div>
+    
     </>
   )
 }
