@@ -40,3 +40,15 @@
 .read-the-docs {
   color: #888;
 }
+h1{
+  background:yellow;
+  color:green;
+  border: 0.1rem solid black;
+}
+h2{
+  background:red;
+  color:#fff;
+  width: 50%;
+  border-radius: 4%;
+  border: 0.1rem solid black;
+}
