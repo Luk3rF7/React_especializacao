@@ -1,5 +1,6 @@
 import City from './assets/city.jpg'
 import './App.css'
+import ManageData from './components/ManageData'
 function App() {
   return (
     <>
@@ -12,6 +13,9 @@ function App() {
     <h1>Importando do Assets</h1>
     <div>
     <img src={City} alt="" />
+    </div>
+    <div>
+      <ManageData />
     </div>
     </>
   )
