@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import style from './MyForm.css'
+import './MyForm.css'
 export default function MyForm({user}) {
   // gerenciamento de dados:
   const [name,setName] = useState(user ? user.name : '')
