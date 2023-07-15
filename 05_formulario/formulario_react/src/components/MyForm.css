@@ -1,0 +1,16 @@
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width:300px;
+  border-radius: 4px;
+  box-shadow: 15px 8px 20px 9px #d4d4d4;
+  margin:0 auto;
+  text-align:left;
+}
+
+input,textarea,select{
+  display:block;
+  margin:15px;
+}
