@@ -2,9 +2,15 @@ import { useState } from 'react';
 import './App.css'
 import MyCompStyle  from './components/MyComponents';
 import Title from './components/title';
+import Car from './components/Car';
 
 
 function App() {
+  const myCars = [
+    {name:"Fusca",Km:10000,color:"Branco"},
+    {name:"Lamborghini",Km:13000,color:"Cinza"},
+    {name:"McLaren",Km:250,color:"Preto"}
+  ]
   const n =1
   const [ name] = useState('Lucas')
   const redTitle = true
@@ -33,6 +39,13 @@ function App() {
     </h2>
     {/* modules.css */}
     <Title />
+    {/* desafio */}
+    <h1>Showroom of Car</h1>
+    <div className="car_container">
+      {myCars.map((car) => (
+        <Car car={car}/>
+      ))}
+    </div>
     </>
   )
 }
