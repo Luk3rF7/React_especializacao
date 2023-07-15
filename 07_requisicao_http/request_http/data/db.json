@@ -1,19 +1,46 @@
 {
-  "products":[
+  "products": [
     {
-      "id":1,
-      "name":"camisa",
-      "price":59.9
+      "id": 1,
+      "name": "Camisa da vicky",
+      "color": "Rosa",
+      "price": 60.9
     },
     {
-      "id":2,
-      "name":"calça vermelha",
-      "price":90
+      "id": 2,
+      "name": "calça do marcelo",
+      "color": "azul",
+      "price": 90
     },
     {
-      "id":3,
-      "name":"Boné aba reta",
-      "price":29.9
+      "name": "Chinelo",
+      "price": "20",
+      "color": "marron",
+      "id": 3
+    },
+    {
+      "name": "teclado",
+      "price": "200",
+      "color": "preto",
+      "id": 4
+    },
+    {
+      "name": "mouse",
+      "price": "60",
+      "color": "red",
+      "id": 5
+    },
+    {
+      "name": "livro",
+      "price": "20",
+      "color": "capa branca",
+      "id": 6
+    },
+    {
+      "name": "Chinelo",
+      "price": "20",
+      "color": "azul",
+      "id": 7
     }
   ]
 }
