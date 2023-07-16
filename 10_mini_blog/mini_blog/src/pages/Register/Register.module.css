@@ -1,0 +1,35 @@
+.container_register{
+  width: 40%;
+  margin:10px auto;
+  padding:10
+}
+.container_register h1{
+  margin:30px auto;
+}
+.container_register hr{
+  margin: 20px auto;
+  background:#000;
+}
+.register{
+  text-align:center;
+  margin-top:25px;
+}
+.register p{
+  color:#aaa;
+}
+.btn{
+  background: #000;
+  color:#fff;
+  font-size: 1.5em;
+  border:2px solid #000;
+  border-radius: 8px;
+  width: 150px;
+  height: 45px;
+  margin: 20px auto;
+  cursor:pointer;
+}
+.btn:active{
+  background-color: #dddd;
+  color:#000;
+  border:1px solid #000;
+}

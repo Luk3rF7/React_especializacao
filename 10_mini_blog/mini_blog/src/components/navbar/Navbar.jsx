@@ -12,11 +12,16 @@ export default function Navbar() {
           <NavLink to={"/Home"} className={({isActive})=>(isActive ? style.active : "")} > Inicio </NavLink>
         </li>
         <li>
-          <NavLink to={"/Login"} className={({isActive})=>(isActive ? style.active : "")} > Login </NavLink>
+          <NavLink to={"/About"} className={({isActive})=>(isActive ? style.active : "")} > Sobre </NavLink>
         </li>
         <li>
-          <NavLink to={"/Info"} className={({isActive})=>(isActive ? style.active : "")} > Info </NavLink>
+          <NavLink to={"/Login"} className={({isActive})=>(isActive ? style.active : "")} > Entrar </NavLink>
         </li>
+     
+        <li>
+          <NavLink to={"/Register"} className={({isActive})=>(isActive ? style.active : "")} > Cadastre-se </NavLink>
+        </li>
+     
       </ul>
     </nav>
   );

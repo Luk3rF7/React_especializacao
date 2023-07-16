@@ -2,12 +2,12 @@
 import { initializeApp } from "firebase/app";
 import {getFirestore } from 'firebase/firestore'
 const firebaseConfig = {
-  apiKey:process.env.REACT_APP_API_KEY,
-  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-  projectId:  process.env.REACT_APP_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId:  process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId:  process.env.REACT_APP_APP_ID 
+  apiKey: "AIzaSyDGiNTI5mi3e1aoxAkF247Q2RFnQ4Kfq1g",
+  authDomain: "mini-blog-codar.firebaseapp.com",
+  projectId: "mini-blog-codar",
+  storageBucket: "mini-blog-codar.appspot.com",
+  messagingSenderId: "482415623075",
+  appId: "1:482415623075:web:0ac007c472589f65d6f816"
 };
 
 // Initialize Firebase
