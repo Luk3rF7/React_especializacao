@@ -7,7 +7,7 @@
 .env
 config.js
 # testing
-/coverage
+src/auth/firebase/config.js
 
 # production
 /build
