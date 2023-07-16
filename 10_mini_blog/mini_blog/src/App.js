@@ -1,26 +1,27 @@
-import './App.css';
+import './styleGlobal/App.css';
 import { BrowserRouter, Routes } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 // components
 import Navbar from './components/navbar/Navbar';
-import Home from './pages/Home';
-import Info from './pages/Info';
-import Login from './pages/Login';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import Footer from './components/footer/Footer';
+
 
 
 function App() {
   return (
     <div className="App">
-      <div>
-        <h1>Mini Blog</h1>
-      </div>
+        
      <BrowserRouter >
      <Navbar />
+      <div className='container'>
      <Routes>
       <Route path={"/Home"} element={<Home />} />
-      <Route path={"/info"} element={<Info />} />
-      <Route path={"/Login"} element={<Login />} />
+      <Route path={"/About"} element={<About />} />
      </Routes>
+      </div>
+      <Footer />
      </BrowserRouter>
     </div>
   );
