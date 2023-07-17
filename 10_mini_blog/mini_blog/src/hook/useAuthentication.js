@@ -41,12 +41,23 @@ export const useAuthentication = () => {
           data.password
         )
         await updateProfile(user,{
-          displayName:data.displayName
+          displayName:data.displayName,
         })
         return user
     }catch(error){
       console.log(error.message)
       console.log(typeof error.message)
+      // msg error
+      let systemErrorMessage
+
+      if(error.message.includes("Password")){
+        systemErrorMessage = "A senha precisa conter pelo menos 6 caracteres! "
+      }else if (error.message.includes("email-already")){
+        systemErrorMessage = "E-mail ja Cadastrado!"
+      }else {
+        systemErrorMessage = "Ocorreu o erro,Por favor tente mais tarde!"
+      }
+     setError(systemErrorMessage)
     }
     setLoading(false)
   }

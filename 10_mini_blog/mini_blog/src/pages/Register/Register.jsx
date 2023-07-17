@@ -14,7 +14,7 @@ export default function Register() {
   const [error,setError] = useState(null)
   // * instanciando hook personalizado :
   const { createUser, error: authError, loading} = useAuthentication();
-  console.log(error,setError)
+
     // * Enviar dados:
     const handleSubmit = async (e) => {
       // * prende submit
@@ -36,6 +36,13 @@ export default function Register() {
       //confirma se usuario foi criado 
       console.log(user)
     }
+
+    // * fazer map 
+    useEffect(() => {
+      if(authError){
+        setError(authError)
+      }
+    },[authError])
   /*  
   *Fim 
   */
@@ -96,7 +103,8 @@ export default function Register() {
           onChange={(e) => setConfirmPassword(e.target.value)}/>
           {error && <p className="error">{error}</p>}
       </label>
-      <button className={style.btn}>Cadastrar</button>
+      {!loading && <button className={style.btn} >Cadastrar</button>}
+      {loading && <button className={style.btn} disabled>Aguarde ...</button>}
     </form>
     </div>
   )
