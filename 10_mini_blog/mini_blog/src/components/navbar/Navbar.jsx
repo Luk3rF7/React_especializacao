@@ -1,11 +1,13 @@
 // * style css
 import style from "./Navbar.module.css";
 import { NavLink } from "react-router-dom";
-import { useAuthentication } from '../../context/AuthContext';
+/* import { useAuthentication } from '../../context/AuthContext'; */
 import { useAuthValue } from '../../context/AuthContext'
+import { useAuthentication } from './../../hook/useAuthentication'
 export default function Navbar() {
   //instancia
   const { user } = useAuthValue() 
+  const { logout } = useAuthentication() 
   return (
     <nav className={style.navbar}>
         <NavLink to={'/'} className={style.brand}> <span> Dev Blog </span>
@@ -30,7 +32,7 @@ export default function Navbar() {
         </li>
       </>)}
       {/*  criar e postar se usuario tiver logado  */}
-      {user && (
+      {!user && (
         <>
            <li>
           <NavLink to={"/posts/create"} className={({isActive})=>(isActive ? style.active : "")} > Novo Post </NavLink>
@@ -40,6 +42,11 @@ export default function Navbar() {
           <NavLink to={"/dashboard"} className={({isActive})=>(isActive ? style.active : "")} > Dashboard </NavLink>
         </li>
         </>
+      )}
+      {!user && (
+      <li>
+          <button onClick={logout}> Logout</button>
+      </li>
       )}
       </ul>
     </nav>

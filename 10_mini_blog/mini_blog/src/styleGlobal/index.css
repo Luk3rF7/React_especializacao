@@ -30,6 +30,23 @@ font-size: 1em;
 cursor:pointer;
 font-family: "lunasima",sans-serif;
 }
+nav button {
+    font-size: 1.1em;
+    color:#fff;
+    text-decoration: none;
+    border:1px solid #eee;
+    padding: .3em;
+    border-radius: 10px 0px 10px 0px;
+}
+nav button:hover {
+  background:#e5e5e5;
+  color:#000;
+   border-radius: 10px 0px 10px 0px;
+  border-bottom: 3px solid rgb(128, 128, 128);
+  border-top: 1.5px dashed #e5e5e5;
+  border-left:1.5px dashed #e5e5e5;
+  border-right:1.5px dashed #e5e4e5; 
+}
 label{
   display:flex;
   flex-direction: column;
@@ -82,7 +99,4 @@ button[disabled]{
   padding:5px;
   border-radius:5px;
 
-}
-footer{
-  margin-bottom:0;
 }
