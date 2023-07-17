@@ -1,19 +1,55 @@
-//style Css
+// css
 import styles from './Home.module.css'
-import blog1 from '../../assets/svg/Blog1.svg'
-import blog3 from '../../assets/svg/Blog3.svg'
-/* import blog3 from '../../assets/svg/Blog3.svg' */
+// react
+import { useState } from "react";
 
-export default function Home() {
+// components
+import PostDetail from "../../components/post/PostDetail";
+import { useFetchDocuments } from './../../hook/useFetchDocuments';
+import { Link, useNavigate } from 'react-router-dom';
+
+const Home = () => {
+  const { documents: posts, loading } = useFetchDocuments("posts");
+
+  const navigate = useNavigate();
+
+  const [query, setQuery] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (query) {
+      return navigate(`/search?q=${query}`);
+    }
+  };
+
+  console.log(loading);
+
   return (
-    
-    <div className={styles.container}>
-      <div>
-      <img src={blog3} alt="" className={styles.img} />
+    <div className={styles.home}>
+      <h1>Veja os nossos posts mais recentes</h1>
+      <form className={styles.search_form} onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Ou busque por tags..."
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        <button className="btn btn-dark">Pesquisar</button>
+      </form>
+      <div className="post-list">
+        {loading && <p>Carregando...</p>}
+        {posts && posts.length === 0 && (
+          <div className={styles.noposts}>
+            <p>Não foram encontrados posts</p>
+            <Link to="/posts/create" className="btn">
+              Criar primeiro post
+            </Link>
+          </div>
+        )}
+        {posts && posts.map((post) => <PostDetail key={post.id} post={post} />)}
       </div>
-    <div >
-      <img src={blog1} alt="" className={styles.img2} />
-    </div>
     </div>
   );
-}
+};
+
+export default Home;
