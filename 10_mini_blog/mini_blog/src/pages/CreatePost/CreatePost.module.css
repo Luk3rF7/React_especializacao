@@ -1,12 +1,32 @@
 .create_post {
   text-align: center;
+  margin : 10px auto;
+  padding-top:30px;
+  height: 90%;
+  width: 90%;
+  border:1px solid #cac9c9;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  box-shadow: 10px 10px 10px 0;
 }
-
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+textarea {
+  overflow: scroll;
+  box-sizing: border-box;
+  border:none;
+  border-bottom: 1px solid #CCC;
+  padding:.8em 0;
+  background-color: transparent; 
+}
 .create_post h2 {
   font-size: 2.2em;
 }
 
 .create_post p {
   color: #aaa;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }

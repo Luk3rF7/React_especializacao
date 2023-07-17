@@ -30,7 +30,7 @@ font-size: 1em;
 cursor:pointer;
 font-family: "lunasima",sans-serif;
 }
-nav button {
+nav label button {
     font-size: 1.1em;
     color:#fff;
     text-decoration: none;

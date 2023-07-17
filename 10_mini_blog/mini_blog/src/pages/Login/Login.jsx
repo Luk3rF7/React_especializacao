@@ -64,7 +64,12 @@ export default function Login() {
         </label>
           Esqueceu a senha? 
         {/* condição para visualiza botao :*/} 
-         {!loading && <button>Login</button>}
+         {!loading && (
+          <label>
+            <button className={style.link}>Login</button>
+          </label>
+         )}
+
          {loading && ( 
         <button>Aguarde...</button>
         )}
